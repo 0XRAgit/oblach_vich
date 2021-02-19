@@ -15,6 +15,7 @@ int main()
         }
         cout << "ar[" << i << "]=" << ar[i] << endl;
     }
+
     //Vtoroye
 
     string sim, stroka;
