@@ -3,8 +3,12 @@
 
 using namespace std;
 
+int main2();
+
 int main()
 {
+    main2();
+
     //Pervoye
 
     int ar[10] = { 1,2,3,4,5,6,7,8,9,10 };
