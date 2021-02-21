@@ -8,25 +8,23 @@ string szh(string stroka) {
     char tranz;
     do {
         if (stroka[i] == stroka[i - 1]) {
-            tranz = stroka[i];
-            per = i;
-            sch = 1;
-            pos = i;
-            while (stroka[i] == tranz) {
-                sch++;
-                i++;
-            }
-
-            stroka[per] = tranz;
-            stroka[pos] = (char)sch;
-            for (per + 1; per < pos; per++) {
-                stroka[i] = NULL;
-            }
-
-
+			per = i - 1;
+			pos = i;
+			sch++;
+			tranz = stroka[i];
+			while (stroka[i] == tranz) {
+				i++;
+				pos = i;
+				sch++;
+			}
+			for (int g = per; g < pos+1;g++) {
+				stroka[g] = NULL;
+			}
+			stroka[per] = sch +'0';
+			stroka[per+1] = tranz;
         }
-
-        i++;
+		sch = 0;
+		i++;
     } while (stroka[i] != '\0');
 
     return stroka;
@@ -39,11 +37,16 @@ int main2()
 
 	getline(cin, str);
 
-	str.length();
-
 	cout << szh(str);
-
 	
+	cin >> str;
 	exit(0);
 	return 1;
 }
+
+/*
+Cоздайте функцию, котора€ организует простейшей сжатие вход€щей символьной строки произвольного масштаба. —жатие происходит по следующему принципу:
+ если в строке есть последовательность повтор€ющихс€ символов, то она замен€етс€ на пару  код символа и количество его повтора в строчке. ќбеспечьте возможность ввода строки с клавиатуры. 
+–еализуйте сортировку массива вставками.(массив из целых чисел). 
+—оздайте программу, позвол€ющую находить в строке подстроку и замен€ть еЄ на другую произвольную подстроку в каждом месте обнаружени€. 
+ */
