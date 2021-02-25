@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Вторая Работа.cpp" />
     <ClCompile Include="Первая работа_1 часть.cpp" />
     <ClCompile Include="Первая работа_2 часть.cpp" />
   </ItemGroup>

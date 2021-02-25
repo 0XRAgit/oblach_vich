@@ -75,7 +75,6 @@ int main2()
 
 	cout << "Конечная: " << stroka<< endl;
 	exit(0);
-	return 1;
 }
 
 /*
